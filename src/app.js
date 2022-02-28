@@ -14,7 +14,6 @@ var expressLayouts = require('express-ejs-layouts');
 var config = require('./config'); 
 var auth = require('./middlewares/auth');
 // var favicons = require('connect-favicons');
-var express = require('express'),
 ipfilter = require('express-ipfilter').IpFilter; //为啥前面不用var,因为前面是逗号哈哈
 var connectMongodb = require('connect-mongo');
 var session = require('express-session');

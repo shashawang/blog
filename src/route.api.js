@@ -125,6 +125,7 @@ router.post('/signup', function(req, res, next) {
   var user = new UserModel();
   user.name = name;
   user.pass = bcrypt.hashSync(pass, 10);
+  // user.pass = pass
   user.save(function(err) { //两次密码填写一样，保存用户信息
     if (err) {
       next(err);

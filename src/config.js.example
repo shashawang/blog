@@ -1,7 +1,0 @@
-module.exports = {
-  cookieName: 'your_cookie_name',
-  jwtSecret: 'your_jwt_secret',
-  mongodbUrl: 'mongodb://db:27017/firstapp',
-  admin: 'admin',
-  sessionSecret: 'your_session_secret'
-}

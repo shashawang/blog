@@ -2,9 +2,9 @@
 FROM node:8.11.0
 
 # 工作目录
-WORKDIR /first-app
+WORKDIR /blog
 # 将文件拷贝至工作目录
-COPY . /first-app
+COPY . /blog
 # 安装依赖
 RUN npm install --verbose
 # 暴露端口

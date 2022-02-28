@@ -13,7 +13,7 @@ var auth = require('./middlewares/auth');
 /* GET posts page. */
 router.get('/', function(req, res, next) {
   res.render('posts', { title: 'posts'} );
-  });
+});
 
 /* GET posts edit page. */
 router.get('/posts/create', auth.adminRequired, function(req, res, next) {
