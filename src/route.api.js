@@ -64,12 +64,14 @@ router.post('/posts', function(req, res, next) {
   var post = new PostModel();
   post.title = title;
   post.content = content;
-  post.authorId = res.locals.currentUser._id;
-  console.log(authorId);
+  post.authorId = res.locals.currentUser && res.locals.currentUser._id;
+  // console.log('------------', res.locals)
   post.save(function (err, doc) {
     if (err) {
+      console.log(err);
       next(err);
     } else {
+      console.log(doc);
       res.json({post: doc}); // 注意这里
     }
   });
@@ -85,6 +87,7 @@ router.post('/posts', function(req, res, next) {
 
 /* GET one post */
 router.get('/posts/:id', function (req, res, next) {
+  // console.log(req.params.id)
   var id = req.query.id;
 
   PostModel.findOne({_id: id}, function(err, post) {
@@ -105,6 +108,7 @@ router.patch('/posts', function(req, res, next) {
 
   PostModel.findOneAndUpdate({ _id: id }, { title, content }, function(err) {
     if (err) {
+      console.log(err)
       next(err);
     } else {
       res.json({ success: true });

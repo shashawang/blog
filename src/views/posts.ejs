@@ -1,21 +1,23 @@
 <div>
   <!-- <% if(currentUser) { %> -->
   <!-- Split button -->
-  <div class="btn-group pull-right">
+  <!-- <div class="btn-group pull-right">
     <button type="button" class="btn btn-default">操作</button>
     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <span class="caret"></span>
       <span class="sr-only">Toggle Dropdown</span>
     </button>
     <ul class="dropdown-menu">
-      <li>
-        <a href="/posts/create">新建</a>
-      </li>
+      <li> -->
+        <!-- <a href="/posts/create">新建</a> -->
+      <!-- </li>
     </ul>
-  </div>
+  </div> -->
   <!-- <% } %> -->
   <!--放错位置放在整段代码下面，首页就不能显示了-->
-  <div class="col-md-10 col-md-offset-1 nav">文章列表</div>
+  <div class="col-md-10 col-md-offset-1 nav">文章列表
+    <a href="/posts/create">新建</a>
+  </div>
   <div class="col-md-10 col-md-offset-1">
     <ul class="list-group" v-for="item in postsList">
       <li class="list-group-item">

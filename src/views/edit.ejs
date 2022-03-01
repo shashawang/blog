@@ -1,5 +1,5 @@
         <div class="col-md-8 col-md-offset-2">
-      <h1>新建文章</h1>
+      <h1>编辑文章</h1>
       <div class="form-group">
         <input type="text" class="form-control" v-model="title" placeholder="输入文字标题">
       </div>
@@ -21,6 +21,7 @@ var vm = new Vue({
   },
   created () {
   axios.get('/api/v1/posts/:id?id=' + postId)
+  // axios.get('/api/v1/posts/'+postId)
     .then(function(response) {
       vm.title = response.data.post.title;
       vm.content = response.data.post.content;
@@ -31,9 +32,9 @@ var vm = new Vue({
   },
   methods: {
     submit () {
-    axios.patch('/api/v1/posts' + postId, //指定处理页面
+    axios.patch('/api/v1/posts', //指定处理页面
       {
-        /* id: postId, */
+        id: postId,
         title: vm.title,
         content: vm.content
       })

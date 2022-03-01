@@ -16,7 +16,8 @@ router.get('/', function(req, res, next) {
 });
 
 /* GET posts edit page. */
-router.get('/posts/create', auth.adminRequired, function(req, res, next) {
+// router.get('/posts/create', auth.adminRequired, function(req, res, next) {
+router.get('/posts/create', function(req, res, next) {
   res.render('create');
 });
 

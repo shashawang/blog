@@ -17,7 +17,9 @@
     </ul>
   </div>
   <!-- <% } %> -->
-  <div class="col-md-10 col-md-offset-1 nav">文章详情</div>
+  <div class="col-md-10 col-md-offset-1 nav">文章详情
+    <a href="/posts/edit?id=<%= post._id %>">编辑</a>
+  </div>
   <div class="col-md-10 col-md-offset-1 content">
     <%- post.content %>
     <!-- <div>
